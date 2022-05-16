@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wrapAll</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        //Dom 로드가 완료 되었을 때
+        $(document).ready(function(){
+                // $('span').wrapAll('<p></p>');
+            $('#span01').unwrap();
+            
+
+                console.log($('body').html());
+        });
+
+
+        </script>
+</head>
+<body>
+   <span>First</span><span>Third</span>
+    <div><span id="span01"> Second</span></div>
+</body>
+</html>

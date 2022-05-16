@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>append, prepend</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        //Dom 로드가 완료 되었을 때
+        $(document).ready(function(){
+ 
+            $('#div01').append("<p>Hello, jQuery!!</p>");
+            console.log($('body').html());
+
+            $('#div02').prepend('<p>First</p>'); // div02 앞에
+            $('<p>First</p>').prependTo('#div02'); // div02 가장 앞에
+
+
+            $('h1').after('<h2>Second</h2>'); //h1 이후 h2추가
+            $('<h2>Second</h2>').insertAfter('h1'); 
+        });
+
+
+        </script>
+</head>
+<body>
+   <div id="div01"></div>
+   <div id="div02"><p>Second</p></div>
+   <h1>First</h1>
+   <h3>Third</h3>
+</body>
+</html>

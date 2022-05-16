@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hierarchy Selector</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        //Dom 로드가 완료 되었을 때
+        $(document).ready(function(){
+        //    const hobby = $(':checkbox[name="hobby"]:checked').val();
+        //    console.log(`hobby : ${hobby}`);
+           let arr=[];
+           $(':checkbox[name="hobby"]:checked').each((idx, elem)=> {
+                arr.push($(elem).val());
+           });
+           console.log(arr.join());
+
+           const size = $('checkbox[name="hobby"]:checked').length;
+           console.log(`size : ${size}`);
+            
+        });
+
+        </script>
+</head>
+<body>
+    취미를 선택하세요.<br>
+    <form>
+        <input type="checkbox" name="hobby" value="game" checked>게임<br>
+        <input type="checkbox" name="hobby" value="climb" checked>등산<br>
+        <input type="checkbox" name="hobby" value="movie" checked>영화<br>
+        <input type="checkbox" name="hobby" value="music" >음악<br>
+    </form>
+</body>
+</html>

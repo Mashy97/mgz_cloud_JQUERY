@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hierarchy Selector</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        //Dom 로드가 완료 되었을 때
+        $(document).ready(function(){
+            // $('ul.ulStyle > li').css('color','blue');
+            // $('ul.ulStyle  li').css('color','red');
+
+            $('#li01 + li+ li').css('color', 'red');
+        });
+
+        </script>
+</head>
+<body>
+    <ul class="ulStyle">
+        <li>first</li>
+        <li>second</li>
+        <li>third</li>
+        <ul>
+            <li id ="li01">third_01</li>
+            <li>third_02</li>
+            <li>third_03</li>
+        </ul>
+    </ul>
+</body>
+</html>

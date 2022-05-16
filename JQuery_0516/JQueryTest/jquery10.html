@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nextAll, addBack</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        //Dom 로드가 완료 되었을 때
+        $(document).ready(function(){
+            $('#item03').nextAll().addBack().ajaxSuccess('color','blue');
+        });
+
+
+        </script>
+</head>
+<body>
+   <ul>
+       <li>list item 01</li>
+       <li>list item 02</li>
+       <li id="item03">list item 03</li>
+       <li>list item 04</li>
+       <li>list item 05</li>
+       <li>list item 06</li>
+   </ul>
+</body>
+</html>

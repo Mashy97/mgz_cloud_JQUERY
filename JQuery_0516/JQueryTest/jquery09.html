@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Filtering</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        //Dom 로드가 완료 되었을 때
+        $(document).ready(function(){
+            // $('li').filter(':nth-child(3)').css('color', 'red');
+            $('li').filter('#item03').css('color', 'red')
+            .end().filter(':first').css('color', 'blue');
+
+            console.log($('li').filter('#item03').end().filter(':first'));
+        });
+
+
+        </script>
+</head>
+<body>
+   <ul>
+       <li>list item 01</li>
+       <li>list item 02</li>
+       <li id="item03">list item 03</li>
+       <li>list item 04</li>
+       <li>list item 05</li>
+       <li>list item 06</li>
+   </ul>
+</body>
+</html>

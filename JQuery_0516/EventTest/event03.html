@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        //Dom 로드가 완료 되었을 때
+        $(document).ready(function(){
+            const type = $(":checkbox[name='hobby']:checked").attr('type');
+            const name = $(":checkbox[name='hobby']:checked").attr('name');
+            const checked01 = $(":checkbox[name='hobby']:checked").attr('checked01');
+            const checked02 = $(":checkbox[name='hobby']:checked").prop('checked02');
+            const value = $(":checkbox[name='hobby']:checked").val();
+           
+
+            console.log(`type : ${type}`);
+            console.log(`name : ${name}`);
+            console.log(`checked01 : ${checked01}`);
+            console.log(`checked02 : ${checked02}`);
+            console.log(`value : ${value}`);
+        });
+
+       
+
+        </script>
+</head>
+<body>
+ 취미를 선택하세요.
+    <form>
+    <input type="checkbox" name="hobby" value="game" checked>게임<br>
+    <input type="checkbox" name="hobby" value="climb" >등산<br>
+    <input type="checkbox" name="hobby" value="movie" >영화<br>
+    <input type="checkbox" name="hobby" value="music" >음악<br>
+    <button type="button" id="btn01">전체선택</button>
+    <button type="button" id="btn02">전체해제</button>
+</form>
+</body>
+</html>

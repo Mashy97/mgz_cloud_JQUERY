@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            
+            console.log($('.pStyle').length);
+            
+        $('.pStyle').each((idx, elem) =>{
+            console.log($(elem).text());
+        });
+
+        $('.pStyle').css('color', 'blue');
+    });
+        </script>
+</head>
+<body>
+    <p class="pStyle">first</p>
+    <p class="pStyle">second</p>
+    <p class="pStyle">third</p>
+</body>
+</html>

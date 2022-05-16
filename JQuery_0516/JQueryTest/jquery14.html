@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Removal</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        //Dom 로드가 완료 되었을 때
+        $(document).ready(function(){
+            // $('p:first').replaceWith('<h1>One</h1>');
+            $('<h1>One</h1>').replaceAll('p:first');
+            console.log($('#div01').html());
+        });
+
+
+        </script>
+</head>
+<body>
+        <div id="div01">
+            <p>First</p>
+            <p>Second</p>
+        </div>
+</body>
+</html>

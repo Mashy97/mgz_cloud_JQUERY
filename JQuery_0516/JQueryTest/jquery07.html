@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hierarchy Selector</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        //Dom 로드가 완료 되었을 때
+        $(document).ready(function(){
+            const value = $(':radio[name="hobby"]:checked').val();
+            const name = $(':radio[name="hobby"]:checked').attr("name");
+            console.log(`name : ${name}, value : ${value}`);
+        });
+
+        </script>
+</head>
+<body>
+    취미를 선택하세요.<br>
+    <form>
+        <input type="radio" name="hobby" value="game" checked>게임<br>
+        <input type="radio" name="hobby" value="climb" >등산<br>
+        <input type="radio" name="hobby" value="movie" >영화<br>
+        <input type="radio" name="hobby" value="music" >음악<br>
+    </form>
+</body>
+</html>
